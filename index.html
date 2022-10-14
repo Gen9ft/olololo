@@ -1,67 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>3D Object</title>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="style.css">
-
-    <!--Imports a model-viewer JavaScript code -->
-    <!--It helps to handle how the 3D Object would be displayed -->
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="korean_fire_extinguisher_01_4k.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" camera-orbit="681.2deg 83.27deg auto">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-</head>
-
-<body>
-    <!-- Main Container -->
-    <div id="container">
-
-      
-        <!-- <div id="navbar">
-            <div id="logo">
-                <img src="assets/logo.png" alt="logo">
-            </div>
-            <ul>
-                <li class="active">
-                    <a href="#">Home</a>
-                </li>
-                <li><a href="#">Tech</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div> -->
-
-     
-        <div id="aSide">
-
-    
-            <model-viewer src="assets/HTC_Vive_Headset.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf">
-            </model-viewer>
-
-           
-
-
-        <!-- <model-viewer src="shared-assets/models/NeilArmstrong.glb" ar environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer> -->
-        </div>
-
-        <!-- <div id="content">
-            <h2>3D VR LIVE</h2>
-            <p>The modern headsets, boost your pleasure to the MAX!</p>
-            <button>Shop</button>
-        </div>
-
-        <div id="icons">
-            <div id="iconsLogo">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-twitter"></i>
-            </div>
-        </div> -->
-    </div>
-</body>
-
-
+  </body>
 </html>
